@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +38,8 @@
 
 - (IBAction)returnData:(id)sender {
     
-    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:_stuff forKey:@"newText"];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
