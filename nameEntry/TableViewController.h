@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewController : UITableViewController
-@property (nonatomic, strong) NSString *strng;
-
+@property (nonatomic, strong) NSMutableArray *fields;
 @end

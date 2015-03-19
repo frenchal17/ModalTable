@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "InputViewController.h"
 
 @interface TableViewController ()
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.fields = [NSMutableArray new];
     }
 
 - (void)didReceiveMemoryWarning {
@@ -23,14 +25,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 0;
-}
+}*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [self.fields count];
 }
 
 
@@ -38,14 +38,14 @@
     
     NSString *SimpleIdentifier = @"simpleIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier forIndexPath:indexPath];
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *myString = [prefs stringForKey:@"newText"];
+    //NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    //NSString *myString = [prefs stringForKey:@"newText"];
     
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
     }
 
-    cell.textLabel.text = myString;
+    cell.textLabel.text = self.fields[indexPath.row];
     
     return cell;
 }
@@ -85,14 +85,16 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"transferDetail"]){
+        
+        ((InputViewController*)segue.destinationViewController).maniArray = self.fields;
+        ((InputViewController*)segue.destinationViewController).i = [self.fields count];
+    }
+    
 }
-*/
+
 
 @end

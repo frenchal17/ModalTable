@@ -29,7 +29,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="M1S-UF-49k">
                             <connections>
                                 <action selector="modalShift:" destination="dNd-xc-qXj" id="eIB-xb-0mp"/>
-                                <segue destination="pxY-8F-GJi" kind="presentation" id="cLc-3u-FJb"/>
+                                <segue destination="pxY-8F-GJi" kind="presentation" identifier="modalMODOK" id="cLc-3u-FJb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -42,7 +42,7 @@
         <!--Enter Text-->
         <scene sceneID="lMW-W4-DnM">
             <objects>
-                <viewController storyboardIdentifier="IVC" title="Enter Text" modalPresentationStyle="formSheet" id="pxY-8F-GJi" customClass="InputViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InputViewController" title="Enter Text" modalPresentationStyle="formSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pxY-8F-GJi" customClass="InputViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YFH-O4-EIm"/>
                         <viewControllerLayoutGuide type="bottom" id="w6R-3P-eBQ"/>

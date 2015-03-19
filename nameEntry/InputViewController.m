@@ -38,8 +38,10 @@
 
 - (IBAction)returnData:(id)sender {
     
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs setObject:_stuff forKey:@"newText"];
+    //NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    //[prefs setObject:self.stuff forKey:@"newText"];
+    NSString *meh = self.stuff.text;
+    self.maniArray[self.i] = meh;
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

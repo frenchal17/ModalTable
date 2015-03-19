@@ -11,6 +11,6 @@
 @interface InputViewController : UIViewController
 - (IBAction)returnData:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *stuff;
-@property (nonatomic) int i;
-
+@property (nonatomic) NSUInteger i;
+@property (strong, nonatomic) NSMutableArray *maniArray;
 @end
