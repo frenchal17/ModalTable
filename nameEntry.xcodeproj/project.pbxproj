@@ -15,6 +15,7 @@
 		03346C0D1AA94DCE007AF1CF /* nameEntryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03346C0C1AA94DCE007AF1CF /* nameEntryTests.m */; };
 		03A421401AB6613400A94B33 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A4213F1AB6613400A94B33 /* InputViewController.m */; };
 		03A421431AB66AFA00A94B33 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A421421AB66AFA00A94B33 /* TableViewController.m */; };
+		03D2A99F1ABB543900E3FC07 /* IVCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2A99E1ABB543900E3FC07 /* IVCDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		03A4213F1AB6613400A94B33 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
 		03A421411AB66AFA00A94B33 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		03A421421AB66AFA00A94B33 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		03D2A99D1ABB543900E3FC07 /* IVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVCDelegate.h; sourceTree = "<group>"; };
+		03D2A99E1ABB543900E3FC07 /* IVCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVCDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				03A4213F1AB6613400A94B33 /* InputViewController.m */,
 				03A421411AB66AFA00A94B33 /* TableViewController.h */,
 				03A421421AB66AFA00A94B33 /* TableViewController.m */,
+				03D2A99D1ABB543900E3FC07 /* IVCDelegate.h */,
+				03D2A99E1ABB543900E3FC07 /* IVCDelegate.m */,
 			);
 			path = nameEntry;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03346BF61AA94DCE007AF1CF /* AppDelegate.m in Sources */,
+				03D2A99F1ABB543900E3FC07 /* IVCDelegate.m in Sources */,
 				03346BF31AA94DCE007AF1CF /* main.m in Sources */,
 				03A421401AB6613400A94B33 /* InputViewController.m in Sources */,
 				03A421431AB66AFA00A94B33 /* TableViewController.m in Sources */,

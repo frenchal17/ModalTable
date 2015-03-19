@@ -35,6 +35,10 @@
     
 }
 
+- (void)setArray:(NSMutableArray *)newAry{
+    NSLog(@"I do not know what to put heeeeeeere to make transferText = newAry");
+}
+
 
 - (IBAction)returnData:(id)sender {
     

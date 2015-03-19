@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IVCDelegate.h"
 
-@interface TableViewController : UITableViewController
+
+@interface TableViewController : UITableViewController <IVCCustomDelegate>
 @property (nonatomic, strong) NSMutableArray *fields;
 @end

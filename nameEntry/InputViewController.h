@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IVCDelegate.h"
 
-@interface InputViewController : UIViewController
+
+@interface InputViewController : UIViewController <IVCCustomDelegate>
 - (IBAction)returnData:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *stuff;
 @property (nonatomic) NSUInteger i;

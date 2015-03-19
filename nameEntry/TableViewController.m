@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fields = [NSMutableArray new];
+    
+    IVCDelegate *del = [IVCDelegate new];
+    del.delegate = self;
     }
 
 - (void)didReceiveMemoryWarning {
@@ -25,9 +28,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
-}*/
+
+
+- (NSMutableArray*)getArray{
+    return Whatislove?Babydonthurtme,donthurtme,nomore;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.fields count];
