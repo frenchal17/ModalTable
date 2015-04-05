@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "IVCDelegate.h"
 
+@protocol exitDelegate <NSObject>
 
-@interface InputViewController : UIViewController <IVCCustomDelegate>
+@required
+
+- (void)inputText:(NSString*)inputtedText;
+
+@end
+
+@interface InputViewController : UIViewController
 - (IBAction)returnData:(id)sender;
+@property (nonatomic, weak) id<exitDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITextField *stuff;
-@property (nonatomic) NSUInteger i;
-@property (strong, nonatomic) NSMutableArray *maniArray;
+//@property (nonatomic) NSUInteger i;
 @end

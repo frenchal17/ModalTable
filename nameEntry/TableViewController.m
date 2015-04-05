@@ -13,14 +13,14 @@
 
 @end
 
-@implementation TableViewController
+@implementation TableViewController{
+    NSInteger i;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.fields = [NSMutableArray new];
     
-    IVCDelegate *del = [IVCDelegate new];
-    del.delegate = self;
     }
 
 - (void)didReceiveMemoryWarning {
@@ -28,11 +28,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-- (NSMutableArray*)getArray{
-    return Whatislove?Babydonthurtme,donthurtme,nomore;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.fields count];
@@ -93,12 +88,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    i = [self.fields count];
     if ([segue.identifier isEqualToString:@"transferDetail"]){
-        
-        ((InputViewController*)segue.destinationViewController).maniArray = self.fields;
-        ((InputViewController*)segue.destinationViewController).i = [self.fields count];
+        ((InputViewController*)segue.destinationViewController).delegate = self;
     }
     
+}
+
+- (void) inputText:(NSString *)inputtedText {
+    self.fields[i] = inputtedText;
+    [self.tableView reloadData];
+    NSLog(@"%@", self.fields);
 }
 
 
