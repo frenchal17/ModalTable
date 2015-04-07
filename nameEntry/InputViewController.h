@@ -20,5 +20,4 @@
 - (IBAction)returnData:(id)sender;
 @property (nonatomic, weak) id<exitDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITextField *stuff;
-//@property (nonatomic) NSUInteger i;
 @end

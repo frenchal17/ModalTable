@@ -88,15 +88,14 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    i = [self.fields count];
-    if ([segue.identifier isEqualToString:@"transferDetail"]){
+    if ([segue.identifier isEqualToString:@"modalMODOK"]){
         ((InputViewController*)segue.destinationViewController).delegate = self;
     }
     
 }
 
 - (void) inputText:(NSString *)inputtedText {
-    self.fields[i] = inputtedText;
+    [self.fields addObject:inputtedText];
     [self.tableView reloadData];
     NSLog(@"%@", self.fields);
 }
